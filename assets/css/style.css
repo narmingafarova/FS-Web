@@ -1,0 +1,269 @@
+@import "fonts.css";
+@import "colors.css";
+
+@import "reset.css";
+@import "button/button.css";
+@import "header/header.css";
+@import "footer/footer.css";
+
+body {
+    font-family: "TT Hoves", sans-serif;
+    background:   url("../img/bg-grid.svg") repeat-y center, #FEFDFC;
+
+    &:has(.open-menu) {
+        overflow: hidden;
+    }
+
+    .container {
+        max-width: calc(100vw - 160px);
+        margin:    0 auto;
+    }
+}
+
+.section-title {
+    max-width:  865px;
+    margin:     0 auto;
+    text-align: center;
+
+    & h3 {
+        font-size:      26px;
+        font-style:     normal;
+        font-weight:    600;
+        line-height:    30px; /* 115.385% */
+        text-transform: uppercase;
+        color:          #2F1D49;
+        padding-bottom: 10px;
+    }
+
+    & p {
+        font-size:   16px;
+        font-style:  normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+        color:       #7D89B0;
+    }
+}
+
+.page-title {
+    display:        flex;
+    flex-direction: column;
+    gap:            20px;
+    text-align:     center;
+
+    & h1 {
+        font-size:      40px;
+        font-style:     normal;
+        font-weight:    600;
+        line-height:    46px; /* 115% */
+        text-transform: uppercase;
+        color:          #2F1D49;
+    }
+
+    & p {
+        font-size:   16px;
+        font-style:  normal;
+        font-weight: 400;
+        line-height: 22px; /* 137.5% */
+        color:       #7D89B0;
+    }
+}
+
+.whole-content-link {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    text-indent: -9999px;
+}
+
+#saleBanner {
+    .sale-banner {
+        text-align: center;
+
+        .banner-icon {
+            padding-bottom: 10px;
+
+            & i {
+                &:before {
+                    font-size: 74px;
+                    color:     #16B364;
+                }
+            }
+        }
+
+        .banner-content {
+            max-width: 870px;
+            margin:    0 auto;
+            padding:   0 0 40px;
+
+            & h4 {
+                font-size:      26px;
+                font-style:     normal;
+                font-weight:    600;
+                line-height:    30px; /* 115.385% */
+                text-transform: uppercase;
+                color:          #2F1D49;
+                padding-bottom: 20px;
+            }
+
+            .key-opportunities {
+                display:         flex;
+                align-items:     center;
+                justify-content: center;
+                gap:             10px;
+
+                & button {
+                    &:after {
+                        border-radius: 36px;
+                        border:        2px solid rgba(180, 174, 247, 0.20);
+                    }
+
+                    & i {
+                        &:before {
+                            color: #12B76A;
+                        }
+                    }
+                }
+            }
+        }
+
+        .banner-actions {
+            display:        flex;
+            flex-direction: column;
+            align-items:    center;
+            gap:            10px;
+
+            & button {
+                width: fit-content;
+            }
+        }
+    }
+}
+
+#chat {
+    position:        fixed;
+    bottom:          40px;
+    right:           80px;
+
+    width:           60px;
+    height:          60px;
+    border-radius:   30px;
+    background:      #7061EF;
+    display:         flex;
+    align-items:     center;
+    justify-content: center;
+    z-index:         100;
+
+    & img {
+        width: 40px;
+    }
+}
+
+#try-buy-mobile {
+    position:       fixed;
+    bottom:         0;
+    right:          0;
+    width:          100%;
+    height:         73px;
+    background:     rgba(255, 255, 255, 0.94);
+    box-shadow:     0 -6px 24px 0 rgba(0, 0, 0, 0.05);
+
+    display:         none;
+    align-items:     center;
+    justify-content: center;
+    gap:             10px;
+    z-index:         100;
+
+    & button {
+        width: 45%;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    body {
+        background:   url("../img/bg-grid-mobile.svg") repeat-y center, #FEFDFC;
+
+        .container {
+            max-width: calc(100vw - 40px);
+        }
+    }
+
+    .section-title {
+        max-width:  100%;
+
+        & h3 {
+            font-size:   18px;
+            line-height: 24px;
+        }
+
+        & p {
+            font-size:   14px;
+            line-height: 20px;
+        }
+    }
+
+    .page-title {
+        max-width: 100%;
+        gap:       10px;
+
+        & h1 {
+            font-size:   22px;
+            line-height: 28px;
+        }
+
+        & p {
+            font-size:   12px;
+            font-weight: 500;
+            line-height: 18px;
+        }
+    }
+
+    #saleBanner {
+        .sale-banner {
+            padding: 0 0 20px;
+
+            .banner-icon {
+                padding: 20px 20px 0 20px;
+
+                & i {
+                    &:before {
+                        font-size: 54px;
+                    }
+                }
+            }
+
+            .banner-content {
+                max-width: 100%;
+
+                & h4 {
+                    font-size:  24px;
+                    padding:    10px 20px 30px;
+                }
+
+                .key-opportunities {
+                    flex-wrap:       wrap;
+                    align-items:     center;
+                    justify-content: center;
+                }
+            }
+        }
+    }
+
+    #chat {
+        bottom: 96px;
+        right: 20px;
+
+        width: 52px;
+        height: 52px;
+        border-radius: 26px;
+
+        & img {
+            width: 30px;
+        }
+    }
+
+    #try-buy-mobile {
+        display: flex;
+    }
+}

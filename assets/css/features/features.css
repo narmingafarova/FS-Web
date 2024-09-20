@@ -1,0 +1,123 @@
+#hero {
+    padding-bottom: 80px;
+
+    .container {
+        display:        flex;
+        flex-direction: column;
+        align-items:    center;
+        gap:            30px;
+
+        .hero {
+            padding: 162px 236px 0;
+
+            & p {
+                max-width: 585px;
+                margin:    0 auto;
+            }
+        }
+    }
+}
+
+#features {
+    .features-cards {
+        display:         flex;
+        justify-content: center;
+        flex-wrap:       wrap;
+        gap:             20px;
+
+        .feature-card {
+            max-width:      363px;
+            position:       relative;
+
+            padding:        20px 25px 20px 20px;
+            border-radius:  30px;
+            background:     #FFF;
+            box-shadow:     0 14px 44px 0 rgba(0, 0, 0, 0.03);
+
+            .order {
+                font-size:      40px;
+                font-style:     normal;
+                font-weight:    600;
+                line-height:    46px; /* 115% */
+                text-transform: uppercase;
+                color:          #2F1D49;
+                opacity:        0.1;
+            }
+
+            & span {
+                font-size:   14px;
+                font-style:  normal;
+                font-weight: 400;
+                line-height: 20px; /* 142.857% */
+                color:       #FF3D71;
+            }
+
+            .info {
+                padding-top:    10px;
+                display:        flex;
+                flex-direction: column;
+                gap:            10px;
+
+                & h5 {
+                    font-size:      16px;
+                    font-style:     normal;
+                    font-weight:    600;
+                    line-height:    22px; /* 137.5% */
+                    text-transform: uppercase;
+                    color:          #2F1D49;
+                }
+
+                & p {
+                    font-size:   14px;
+                    font-style:  normal;
+                    font-weight: 400;
+                    line-height: 20px; /* 142.857% */
+                    color:       #7D89B0;
+                }
+            }
+        }
+    }
+}
+
+#saleBanner {
+    padding: 100px 0;
+
+    .sale-banner {
+        background: #FDE272;
+        padding:    40px 60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #hero {
+        padding-bottom: 30px;
+
+        .container {
+            gap: 20px;
+
+            .hero {
+                padding: 93px 0 0;
+
+                & p {
+                    max-width: 100%;
+                }
+            }
+        }
+    }
+
+    #features {
+        .features-cards {
+            .feature-card {
+                max-width: 100%;
+            }
+        }
+    }
+
+    #saleBanner {
+        padding: 50px 0 20px;
+
+        .sale-banner {
+            padding: 0 0 20px;
+        }
+    }
+}

@@ -1,0 +1,178 @@
+#hero {
+    .container {
+        padding-bottom: 50px;
+        border-bottom:  1px solid #F1F0EF;
+
+        .hero {
+            padding-top: 162px;
+
+            & h1 {
+                font-size:   26px;
+                font-style:  normal;
+                font-weight: 600;
+                line-height: 30px; /* 115.385% */
+                color:       #2F1D49;
+            }
+        }
+    }
+}
+
+#terms-conditions {
+    .container {
+        padding:        50px 0 100px;
+        border-bottom:  1px solid #F1F0EF;
+        display:        flex;
+        flex-direction: column;
+        gap:            50px;
+
+        & p, & li {
+            font-size:   14px;
+            font-style:  normal;
+            font-weight: 400;
+            line-height: 20px; /* 142.857% */
+        }
+
+        .info-content {
+            display:        flex;
+            flex-direction: column;
+            gap:            20px;
+
+            & p {
+                color: #2F1D49;
+            }
+        }
+
+        .terms-conditions {
+            display:        flex;
+            flex-direction: column;
+            gap:            30px;
+
+            .term {
+                display: flex;
+                gap:     3px;
+
+                .main {
+                    font-size:      14px;
+                    font-style:     normal;
+                    font-weight:    600;
+                    line-height:    20px; /* 142.857% */
+                    text-transform: uppercase;
+                }
+
+                .order {
+                    color: #16B364;
+                }
+
+                .info {
+                    display:        flex;
+                    flex-direction: column;
+                    gap:            5px;
+
+                    .title {
+                        color: #2F1D49;
+                    }
+
+                    & p, & li {
+                        color: #7D89B0;
+                    }
+
+                    .desc {
+                        display:        flex;
+                        flex-direction: column;
+                        gap:            20px;
+
+                        & ul {
+                            padding-left: 15px;
+
+                            & li {
+                                list-style: disc;
+                            }
+                        }
+
+                        .note {
+                            display: flex;
+                            gap:     2px;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+#saleBanner {
+    padding: 40px 0;
+
+    .sale-banner {
+        background: transparent;
+        padding:    60px;
+    }
+}
+
+@media screen and (max-width: 375px) {
+    #hero {
+        .container {
+            padding-bottom: 40px;
+
+            .hero {
+                padding-top: 93px;
+
+                & h1 {
+                    font-size:   22px;
+                    line-height: 28px;
+                }
+            }
+        }
+    }
+
+    #terms-conditions {
+        .container {
+            padding: 20px 0 30px;
+            gap:     20px;
+
+            & p, & li {
+                font-size:   12px;
+                line-height: 18px;
+            }
+
+            .terms-conditions {
+                gap: 16px;
+
+                .term {
+                    gap: 5px;
+
+                    .main {
+                        font-size:   12px;
+                        line-height: 18px;
+                    }
+
+                    .info {
+                        gap: 3px;
+
+                        .desc {
+                            gap: 15px;
+
+                            & ul {
+                                padding-left: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+
+    #saleBanner {
+        padding: 20px 0 30px;
+
+        .sale-banner {
+            padding: 0;
+
+            .key-opportunities {
+                & button {
+                    background: white;
+                }
+            }
+        }
+    }
+}
